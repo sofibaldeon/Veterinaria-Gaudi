@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&family=Oswald&family=Plus+Jakarta+Sans:wght@500&family=Source+Sans+Pro:wght@200&display=swap');
+/*font-family: 'Lexend Deca', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;*/
+
+body{
+    font-family:'Oswald', sans-serif;
+    font-size: 25px;
+    min-height: 100%;
+}
+html{
+    height: 100%;
+}
+.contenedor{
+    padding: 5px;
+}
+
+.contenedor{
+    display: grid;
+    gap: 1px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "sidebar"
+    "principal"
+    "pie";
+}
+.header{
+    grid-area: header;
+    background-color: #9b2295;
+}
+.navbar{
+    grid-area: navbar;
+    background-color: #9b2295;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: white;
+}
+.pie{
+    grid-area: pie;
+    background-color: #9b2295;
+    text-align: center;
+}
+.pie p{
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: capitalize;
+    color: whitesmoke;
+    margin-bottom: 15px;
+}
+.pie i{
+    font-size: 43px;
+    color: whitesmoke;
+    letter-spacing: 15px;
+    padding: 20px;
+}
+.subir{
+    height: 40px;
+    width: 40px;
+    background-color: #13b3c1;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    text-align: center;
+    font-size: 27px;
+    line-height: 40px;
+    color: whitesmoke;
+    border:3px solid whitesmoke;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #fff;
+}
+
+.principal{
+    grid-area: principal;
+}
+.principal{
+    background-image: url(multimedia/gatoinicio.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.escribinos{
+    color: #fff;
+    float: right;
+    background-color: #13b3c195;
+    padding: 25px 15px 25px 15px;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 28px;
+    margin-right: 28px;
+}
+.escribinos h1{
+    color: #fff;
+    font-family:'Oswald', sans-serif;
+    margin-bottom: 20px;
+}
+.escribinos p{
+    margin-bottom: 20px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.escribinos a {
+    background-color: #9b2295c8;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+.escribinos a:hover{
+    background-color: #13b3c195;
+}
+.imgheader{
+    width: 180px;
+    height: auto;
+}
+.navbar ul{
+    list-style: none;
+    float: right;
+}
+.navbar ul li{
+    display: inline-block;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    padding: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+@media(min-width:320px){
+    .contenedor{
+        display: grid;
+        gap: 1px;
+        grid-template-areas: 
+        "header"
+        "navbar"
+        "sidebar"
+        "principal"
+        "pie";
+    }
+    }
+@media(min-width: 598px){
+    .contenedor{
+        grid-template-columns: 300px auto;
+        grid-template-rows: 100px 50px auto 100px;
+        grid-template-areas: 
+        "header header"
+        "navbar navbar"
+        "sidebar principal"
+        "pie pie";
+    }
+}
+@media(min-width: 900px){
+    .contenedor{
+        grid-template-columns: 200px auto 350px;
+        grid-template-rows: 100px 50px auto 100px;
+        grid-template-areas: 
+        "header header header"
+        "navbar navbar navbar"
+        "principal principal sidebar"
+        "pie pie pie";
+    }
+}

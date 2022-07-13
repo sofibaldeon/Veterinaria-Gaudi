@@ -1,0 +1,182 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&family=Oswald&family=Plus+Jakarta+Sans:wght@500&family=Source+Sans+Pro:wght@200&display=swap');
+/*font-family: 'Lexend Deca', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;*/
+
+body{
+    font-family:'Oswald', sans-serif;
+    font-size: 25px;
+    min-height: 100%;
+}
+html{
+    height: 100%;
+}
+.contenedor{
+    padding: 5px;
+}
+.contenedor{
+    display: grid;
+    gap: 1px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "mainblog"
+    "sec1"
+    "sec2"
+    "footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 200px auto 200px 100px;
+}
+.header{
+    grid-area: header;
+    background-color: #9b2295;
+}
+.imgheader{
+    width: 180px;
+    height: auto;
+}
+.navbar{
+    grid-area: navbar;
+    background-color: #9b2295;
+}
+.mainblog{
+    grid-area: mainblog;
+   background-color: #13b3c19d;
+   border: 2px solid #13b3c19d;
+}
+.sec1{
+    grid-area: sec1;
+    background-image: url(/multimedia/KITTY.jpg);
+    background-size: cover;
+}
+.sec2{
+    grid-area: sec2;
+}
+.footer{
+    grid-area: footer;
+    background-color: #9b2295;
+    text-align: center;
+}
+footer p{
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: capitalize;
+    color: whitesmoke;
+    margin-bottom: 15px;
+}
+footer i{
+    font-size: 43px;
+    color: whitesmoke;
+    letter-spacing: 15px;
+    padding: 20px;
+}
+.navbar ul{
+    list-style: none;
+    float: right;
+}
+.navbar ul li{
+    display: inline-block;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    padding: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.subir{
+    height: 40px;
+    width: 40px;
+    background-color: #13b3c1;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    text-align: center;
+    font-size: 27px;
+    line-height: 40px;
+    color: whitesmoke;
+    border:3px solid whitesmoke;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #fff;
+}
+.mainblog h1{
+    color: #9b2295;
+    font-size: 25px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.mainblog p{
+    color: white;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    text-align: right;
+    
+}
+.sec2{
+    background-position: left;
+    background-size: 100px;
+   background-size: cover;
+   background-color: #9b2295c9;
+}
+.sec2 h2{
+    color:  #13b3c1;
+    font-size: 25px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+}
+.sec2 p{
+    color: white;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    text-align: right;
+}
+@media(min-width:320px){
+    .contenedor{
+        display: grid;
+        gap: 1px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 100px 200px 600px 500px 100px;
+        grid-template-areas:
+        "header"
+        "navbar"
+        "sec1"
+        "mainblog"
+        "sec2"
+        "footer";
+    }
+    }
+    @media(min-width: 598px){
+        .contenedor{
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px 100px 100px 500px 400px 100px;
+            grid-template-areas: 
+            "header header header "
+            "navbar navbar navbar "
+            "sec1 mainblog mainblog"
+            "sec1 mainblog mainblog"
+            "sec2 sec2 sec2"
+            "footer footer footer";
+        }
+    }
+    @media(min-width: 900px){
+        .contenedor{
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px 100px 100px 300px 400px 100px;
+            grid-template-areas: 
+            "header header header "
+            "navbar navbar navbar "
+            " mainblog mainblog sec1"
+            " mainblog mainblog sec1"
+            "sec2 sec2 sec2"
+            "footer footer footer";
+        }
+    }
