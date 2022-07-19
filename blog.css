@@ -124,8 +124,7 @@ footer i{
     background-position: left;
     background-size: 100px;
    background-size: cover;
-   background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
-   
+   background: linear-gradient(to bottom, #149c9a 0%, #6b0e6b 100%);
 }
 .sec2 h2{
     color:  #13b3c1;
